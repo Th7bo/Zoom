@@ -65,10 +65,8 @@ class ConnectionListener : Listener {
             val add = updateZoom(p, slot)
             var zoom = Misc.getZoomLevel(p) ?: 1.0
             if (add) {
-                println("Adding")
                 zoom += 0.5
             } else {
-                println("Subtracting")
                 zoom -= 0.5
             }
             if (zoom < 0.5) {
@@ -77,7 +75,6 @@ class ConnectionListener : Listener {
             if (zoom > 10.0) {
                 zoom = 10.0
             }
-            p.sendActionBar("Zoom level: $zoom")
             Misc.setZoom(p, zoom)
             Misc.setFOV(p, zoom)
             p.inventory.heldItemSlot = 0
