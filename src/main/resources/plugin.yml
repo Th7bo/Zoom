@@ -1,0 +1,4 @@
+name: Zoom
+version: '${version}'
+main: com.th7bo.zoom.Zoom
+api-version: '1.20'
